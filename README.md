@@ -5,6 +5,7 @@ A lot of software applications contain features whose sole purpose is to just re
  - None
 ## Java Requirements
  - Java 8+
+ - OpenJDK 11+
 ## Supported File Types
  - XLSX
 ## Features
