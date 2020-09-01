@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kk.utils</groupId>
+    <groupId>com.github.kunalk16</groupId>
     <artifactId>lightExcelReader</artifactId>
     <version>1.0</version>
 
-    <name>excelReader</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <name>Light Excel Reader</name>
+    <description>A lightweight framework to read .xlsx excel files.</description>
+    <url>https://github.com/kunalk16/lightExcelReader</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
