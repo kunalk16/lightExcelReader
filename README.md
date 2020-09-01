@@ -1,6 +1,15 @@
+[![Build Status](https://api.travis-ci.org/kunalk16/lightExcelReader.svg?branch=master)](https://api.travis-ci.org/kunalk16/lightExcelReader.svg?branch=master)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.kunalk16/lightExcelReader/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.kunalk16/lightExcelReader)
+
 # Light Excel Reader
 A lightweight Java Framework that can be used to read XLSX Excel files.
 A lot of software applications contain features whose sole purpose is to just read data from XLSX files for which they need to rely on existing heavyweight frameworks with additional dependencies. This framework's sole purpose is to help users to read data from .xlsx files.
+## Maven Dependency
+    <dependency>
+        <groupId>com.github.kunalk16</groupId>
+        <artifactId>lightExcelReader</artifactId>
+        <version>1.0.0</version>
+    </dependency>
 ## Dependencies
  - None
 ## Java Requirements
