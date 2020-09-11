@@ -8,4 +8,8 @@ public interface Sheet {
     Collection<Row> getRows();
 
     Row getRowByIndex(int index);
+
+    Cell getCell(int rowIndex, String columnName);
+
+    Cell getCell(int rowIndex, int columnIndex);
 }

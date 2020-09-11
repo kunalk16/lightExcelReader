@@ -6,7 +6,7 @@
 
     <groupId>com.github.kunalk16</groupId>
     <artifactId>lightExcelReader</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>Light Excel Reader</name>
     <description>A lightweight Java framework to read .xlsx excel files.</description>
