@@ -11,7 +11,16 @@ A lot of software applications contain features whose sole purpose is to just re
         <version>1.0.1</version>
     </dependency>
 ## Dependencies
- - None
+### Main
+ - com.sun.xml.bind » jaxb-core
+ - com.sun.xml.bind » jaxb-impl
+ - javax.activation » javax.activation-api
+ - javax.xml.bind » jaxb-api
+ - org.glassfish.jaxb » jaxb-runtime
+### Test
+ - org.junit.jupiter » junit-jupiter-engine
+ - org.mockito » mockito-core
+ - org.mockito » mockito-junit-jupiter
 ## Java Requirements
  - Java 8+
  - OpenJDK 11+
