@@ -3,3 +3,9 @@
 /.idea
 
 /target
+
+/.settings
+
+.project
+
+.classpath
