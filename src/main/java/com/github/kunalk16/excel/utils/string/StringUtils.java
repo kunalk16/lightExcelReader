@@ -1,6 +1,7 @@
 package com.github.kunalk16.excel.utils.string;
 
 import java.util.Optional;
+import java.util.function.IntPredicate;
 
 public class StringUtils {
     public static final String EMPTY = "";
@@ -63,6 +64,17 @@ public class StringUtils {
         return getOptionalString(string)
                 .map(s -> s.lastIndexOf(word))
                 .orElse(INDEX_NOT_FOUND);
+    }
+
+    public static boolean isNotBlank(String value) {
+        return !StringUtils.isBlank(value);
+    }
+
+    public static boolean isBlank(String value) {
+        return getOptionalString(value)
+                .map(String::codePoints)
+                .map(intStream -> intStream.noneMatch(((IntPredicate) (Character::isWhitespace)).negate()))
+                .orElse(true);
     }
 
     private static Optional<String> getOptionalString(String string) {

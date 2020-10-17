@@ -23,4 +23,16 @@ public class StringUtilsTest {
         String test = "A quick brown fox";
         assertTrue(StringUtils.endsWith(test, "fox"));
     }
+
+    @Test
+    public void testIsBlank() {
+        String test = "   ";
+        assertTrue(StringUtils.isBlank(test));
+    }
+
+    @Test
+    public void testIsNotBlank() {
+        String test = "   r";
+        assertTrue(StringUtils.isNotBlank(test));
+    }
 }

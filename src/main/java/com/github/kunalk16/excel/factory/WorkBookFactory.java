@@ -1,19 +1,20 @@
 package com.github.kunalk16.excel.factory;
 
+import com.github.kunalk16.excel.factory.extractor.CellLocationByDefinedNameExtractor;
 import com.github.kunalk16.excel.factory.extractor.SheetByNameExtractor;
 import com.github.kunalk16.excel.factory.extractor.SheetNamesExtractor;
 import com.github.kunalk16.excel.file.validation.ExcelFileValidation;
 import com.github.kunalk16.excel.model.factory.ExcelArchiveFiles;
+import com.github.kunalk16.excel.model.factory.ExcelNamedCellLocation;
 import com.github.kunalk16.excel.model.factory.ExcelWorkBook;
 import com.github.kunalk16.excel.model.factory.ExcelXMLData;
+import com.github.kunalk16.excel.model.jaxb.workbook.WorkBookType;
 import com.github.kunalk16.excel.model.user.Sheet;
 import com.github.kunalk16.excel.model.user.WorkBook;
 import com.github.kunalk16.excel.utils.logger.ExcelReaderLogger;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class WorkBookFactory {
@@ -36,11 +37,18 @@ public class WorkBookFactory {
     }
 
     private static WorkBook getWorkBookData(ExcelXMLData excelXMLData) {
-        return Optional.ofNullable(excelXMLData)
+        final Map<String, Sheet> sheetByName = Optional.ofNullable(excelXMLData)
                 .map(WorkBookFactory::getSheets)
                 .map(new SheetByNameExtractor())
-                .map(ExcelWorkBook::new)
-                .orElse(null);
+                .orElse(Collections.emptyMap());
+
+        final Map<String, ExcelNamedCellLocation> cellByDefinedName = Optional.ofNullable(excelXMLData)
+                .map(ExcelXMLData::getWorkBook)
+                .map(WorkBookType::getDefinedNames)
+                .map(new CellLocationByDefinedNameExtractor())
+                .orElse(Collections.emptyMap());
+
+        return new ExcelWorkBook(sheetByName, cellByDefinedName);
     }
 
     private static List<Sheet> getSheets(ExcelXMLData excelXMLData) {

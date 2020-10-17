@@ -8,7 +8,7 @@ A lot of software applications contain features whose sole purpose is to just re
     <dependency>
         <groupId>com.github.kunalk16</groupId>
         <artifactId>lightExcelReader</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 ## Dependencies
 ### Main
@@ -22,7 +22,6 @@ A lot of software applications contain features whose sole purpose is to just re
  - org.mockito » mockito-core
  - org.mockito » mockito-junit-jupiter
 ## Java Requirements
- - Java 8+
  - OpenJDK 11+
 ## Supported File Types
  - XLSX

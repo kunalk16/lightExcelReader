@@ -8,4 +8,6 @@ public interface WorkBook {
     Sheet getSheet(String sheetName);
 
     Collection<Sheet> getSheets();
+
+    Cell getCellByDefinedName(String definedName);
 }

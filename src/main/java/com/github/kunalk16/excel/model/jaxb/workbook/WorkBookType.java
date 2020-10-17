@@ -8,6 +8,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class WorkBookType {
     private SheetsType sheets;
 
+    private DefinedNamesType definedNames;
+
     @XmlElement(name = "sheets")
     public SheetsType getSheets() {
         return sheets;
@@ -15,5 +17,14 @@ public class WorkBookType {
 
     public void setSheets(SheetsType sheets) {
         this.sheets = sheets;
+    }
+
+    @XmlElement(name = "definedNames")
+    public DefinedNamesType getDefinedNames() {
+        return this.definedNames;
+    }
+
+    public void setDefinedNames(DefinedNamesType definedNames) {
+        this.definedNames = definedNames;
     }
 }
